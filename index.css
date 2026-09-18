@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html,
+body{
+    background-color: bisque;
+}
+
+#header{
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+button{
+    height: 30px;
+    width: 150px;
+    color: crimson;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+label{
+    color:crimson;
+    font-size: larger;
+    font-family:sans-serif;
+}
+
+h1{
+    color: crimson;
+    font-family: monospace;
+}
+
+a{
+    text-decoration: none;
+    color: crimson;
+    background-color: aquamarine;
+    width: 160px;
+    padding: 10px;
+    padding-left: 20px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Link rel="stylesheet" href="index.css" />
+</head>
+<body>
+     
+   <!DOCTYPE html>
+<html>
+
+<body>
+
+     <center><h1>Signature Dashboard</h1></center>
+    <div id="header">
+        <label>Change Color<br>
+            <input type="color" class="changeColor" >
+        </label>
+         <label>Change Background<br>
+            <input type="color" class="changeBackground">
+        </label>
+         <label>Change width<br>
+            <select class="changeWidth">
+                <option value="1">1px</option>
+                <option value="2">2px</option>
+                <option value="4">4px</option>
+                <option value="6">6px</option>
+                <option value="8">8px</option>
+                <option value="10">10px</option>               
+            </select>
+        </label>
+    </div>
+    <div id="main">
+        <canvas style="background-color: white;" id="canvas" width="700" height="400"></canvas>
+    </div>
+    <div id="footer">
+    <button class="clear" onclick="onClear()">Clear</button>
+    <a href="image.png" onclick="onSave(event)" class="save" download="my-Signature.png">Save and Download</a>
+    <button onclick="onUndo()" class="undo">undo</button>
+    
+</div>
+
+
+      
+    <script src="app.js"></script>
+</body>
+</html>
