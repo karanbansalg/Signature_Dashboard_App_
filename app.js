@@ -14,6 +14,7 @@ function onChangeColor(e){
 }
 
 function onChangeBackground(e){
+    ctx.fillStyle = e.target.value;
   canvas.style.backgroundColor = e.target.value
   
 }
@@ -28,35 +29,41 @@ function onMouseDown(e){
     isDrawing = true
     ctx.beginPath()
     ctx.moveTo(e.offsetX + 50,e.offsetY + 50)
-       
+     
 }
 
 function onMouseMove(e){  
     if(!isDrawing)return
     ctx.lineTo(e.offsetX + 50,e.offsetY + 50) 
     ctx.stroke()
+    
 }
 
 function onMouseUp(){
     isDrawing = false
     if(isDrawing = false)return
+
 }
 
 function onClear(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
     isDrawing = false
+    if(isDrawing = false)return
 }
-let a = []
+
 function onSave(){
    save.href =  canvas.toDataURL('png')
-   a += save.href 
+   localStorage.setItem('sign',save.href)
    onClear()
 }
-console.log(canvas.toDataURL('png'));
+
 function onUndo(){
-    onClear()
-    canvas.baseURI = a
-    ctx.stroke()
+  let img = new Image;
+img.onload = function(){
+  ctx.drawImage(img,0,0); 
+};
+img.src = save.href;
+   
 }
 
 canvas.addEventListener('mousedown',onMouseDown)
